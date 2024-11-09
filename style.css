@@ -11,12 +11,22 @@ body {
     background: rgb(2, 0, 36);
     background: radial-gradient(circle, rgba(2, 0, 36, 1) 5%, rgba(9, 9, 121, 0.87) 36%, rgba(0, 212, 255, 1) 100%);
     color: #f0f8ff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
 }
 
 /* Header styling */
@@ -82,6 +92,35 @@ body {
     }
 }
 
+/* Mobile and tablet menu styling */
+@media (max-width: 768px) {
+    .toggle-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        padding: 1rem;
+        position: absolute;
+        top: 60px; /* adjust as needed */
+        right: 0;
+        width: 100%;
+    }
+
+    .toggle-menu.active {
+        display: flex;
+    }
+
+    .toggle-menu li {
+        margin-bottom: 1rem;
+    }
+
+    .menu-icon {
+        display: block;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+
 /* Landing section */
 .landing {
     text-align: center;
@@ -99,6 +138,7 @@ body {
 @media (max-width: 768px) {
     .landing h1 {
         font-size: 3rem;
+        margin-bottom: 1rem;
     }
     .landing p {
         font-size: 1rem;
@@ -136,6 +176,27 @@ body {
     margin: 0;
 }
 
+/* CV section */
+.cv-button {
+    display: inline-block;
+    background-color: #0073b1;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #005582;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Project Section */
 .project {
     padding: 2rem 0;
@@ -151,6 +212,10 @@ body {
     font-size: 2rem;
 }
 
+.project-item h3 {
+    font-weight: 600;
+}
+
 .project-list {
     display: flex;
     flex-wrap: wrap;
@@ -160,14 +225,27 @@ body {
 .project-item {
     text-align: center;
     width: 30%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 .project-item img {
     width: 100%;
     height: 200px;
     border-radius: 5px;
-    /* object-fit: cover; */
+    object-fit: cover;
+    position: relative;
+}
+
+.project-item img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -179,6 +257,7 @@ body {
 @media (max-width: 480px) {
     .project-item {
         width: 100%;
+        height: auto;
     }
 }
 
@@ -245,3 +324,45 @@ body {
 .social-links a:hover {
     background-color: #005582;
 }
+
+/* social lins and project item hover effect */
+.social-links a:hover, .project-item a:hover {
+    background-color: #005582;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/*  Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-on-load {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Gradient effect in Headings and Buttons */
+/* h1, h2 {
+    background: linear-gradient(to right, #ffffff, #2a2a50);
+    -webkit-background-clip: text;
+    color: transparent;
+} */
