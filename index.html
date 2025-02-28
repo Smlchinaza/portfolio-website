@@ -4,87 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
     <title>Samuel Chinaza - Portfolio</title>
 </head>
 
 <body>
+    <script src="main.js" defer></script>
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <nav>
-                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-                <ul class="toggle-menu">
-                    <li><a class="active" href="#">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <h1 class="logo">Sam's Portfolio</h1>
+            <ul class="toggle-menu">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </nav>
     </header>
+    
 
     <!-- Landing Section -->
-    <section class="landing">
+    <section id="about" class="about">
         <div class="container">
-            <h1>CHUKWUEMEKA,</h1>
-            <h1> SAMUEL <span class="last-name">CHINAZA</span></h1>
-            <img class="profile-picture" src="images/profile picture.jpg" alt="profile picture">
-            <p>Hi, I'm a passionate frontend web developer </p>
-            
+            <div id="about-content" class="about-content">
+                <!-- About Me details will be inserted here dynamically -->
+            </div>
         </div>
     </section>
+    
 
     <!-- Download CV -->
     <section class="CV">
         <div class="cta">
-            <a href="https://drive.google.com/file/d/1PPROeIydZ79pR6rfB05FI_gEXfm2sgg5/view?usp=sharing" download class="cv-button" target="_blank">Download CV</a>
+            <a href="https://drive.google.com/file/d/1YT5b0KsihCXNw1Xg5O4ZeUCM6YouWbFW/view?usp=sharing" download class="cv-button" target="_blank">Download Resume</a>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="project">
         <div class="container">
-            <h2>Projects</h2>
-            <ul class="project-list">
-                <li class="project-item">
-                    <img src="images/Quiz-app.png" alt="Quick Quiz">
-                    <a href="https://smlchinaza.github.io/QUIZ-APP/" target="_blank">
-                        <h3>Quick Quiz</h3>
-                    </a>
-                        <p>Quiz app website prototype, featuring an interactive design with real-time feedback, question randomization, and score tracking.</p>
-                </li>
-                <li class="project-item">
-                    <img src="images/weather-app.png" alt="Project 2">
-                    <a href="https://smlchinaza.github.io/Weather_App/" target="_blank">
-                        <h3>Weather App</h3>
-                    </a>
-                        <p>Weather app that provides real-time tracking of temperature, humidity, and wind speed.</p>
-                </li>
-                <li class="project-item">
-                    <img src="images/PayChum.png" alt="Project 3">
-                    <a href="https://smlchinaza.github.io/fin-tech-landing-page/" target="_blank">
-                        <h3>Fin Tech Landing Page</h3>
-                    </a>
-                        <p>Fintech website prototype using featuring a modern, user-centric design that showcases financial products and services.</p>
-                </li>
-            </ul>
+            <h2>Some Projects</h2>
+            <ul id="project-list" class="project-list"></ul>
         </div>
     </section>
+    
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2>Tech Stack</h2>
-            <ul class="skills-list">
-                <li><img src="images/html.png" alt="HTML"></li>
-                <li><img src="images/css-file.png" alt="CSS"></li>
-                <li><img src="images/java-script.png" alt="JavaScript"></li>
-                <li><img src="images/python.png" alt="Python"></li>
-            </ul>
+            <ul id="skills-list" class="skills-list"></ul>
         </div>
     </section>
+    
 
     <!-- Call to Action Section -->
     <section id="contact" class="cta">
