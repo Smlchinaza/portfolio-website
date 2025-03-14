@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // List of specific repositories to display
     const featuredRepos = new Set([
         "crypto-payment-gateway",
+        "conference-ticket-generator-main",
         "satoshi-vision",
         "Crowdfunding",
         "AirBnB_clone_v4",
