@@ -1,7 +1,7 @@
 # 🚀 Samuel Chinaza - Portfolio
 
 ## 📌 Overview
-This is a **personal portfolio website** designed to showcase my **projects, skills, and professional experience**. The website dynamically fetches information from my **GitHub profile**, including **projects, skills, and bio**, and features a **dark/light mode toggle** for enhanced user experience.
+This is a **personal portfolio website** designed to showcase my **projects, skills, and professional experience**. The website dynamically fetches information from my **GitHub profile**, including **projects, skills, and bio**, and features a **dynamic effects** for enhanced user experience.
 
 ## 🎨 Features
 - **Fully Responsive**: Works seamlessly across desktop, tablet, and mobile devices.
@@ -9,7 +9,6 @@ This is a **personal portfolio website** designed to showcase my **projects, ski
   - Fetches and displays **featured repositories**.
   - Extracts **top programming languages** from GitHub repositories.
   - Displays **GitHub bio and profile information**.
-- **Dark/Light Mode Toggle**: Allows users to switch themes, with preferences saved in local storage.
 - **Futuristic Design**:
   - **Glassmorphism effects** for a modern look.
   - **Background animation** with moving gradient.
@@ -23,7 +22,6 @@ This is a **personal portfolio website** designed to showcase my **projects, ski
 - **HTML, CSS, JavaScript**
 - **GitHub API** for dynamic data fetching
 - **CSS Animations** for interactive design
-- **Local Storage** for theme preference persistence
 
 ## 🚀 Getting Started
 ### 🔧 Setup Instructions
